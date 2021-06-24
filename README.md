@@ -1,4 +1,4 @@
-# Buttswap's Folkpunk Financial Analytics (country recipe)
+# Buttswap's Folk Financial Analytics (mountain XL recipe)
 
 COMING SOON: http://www.buttswap.finance/
 

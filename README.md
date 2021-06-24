@@ -1,9 +1,12 @@
 # Buttswap's Financial Analytics 
 
+COMING SOON: http://www.buttswap.finance/
 
 **Technical Analysis superhighway**  
 **Home of the Booty Billy**  
 **The original Uniswap clone**  
+
+If you would like to help please send me a robust messaging pigeon via [slack | github-message | Angular CLI interface]
 
 # Components
 - Twitter API consumption

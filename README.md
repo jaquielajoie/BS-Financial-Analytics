@@ -1,9 +1,9 @@
 # Buttswap's Financial Analytics 
 
 Corporate Awards:  
-- Technical Analysis superhighway  
-- Home of the Booty Billy  
-- The original Uniswap clone  
+**Technical Analysis superhighway**  
+**Home of the Booty Billy**  
+**The original Uniswap clone**  
 
 # Components
 - Twitter API consumption

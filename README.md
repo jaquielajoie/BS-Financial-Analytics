@@ -24,6 +24,8 @@ If you would like to help please send me a robust messaging pigeon via [slack | 
 - run <code> python tweet_listenr.py </code>
 - run the flask server
 
+MISSING: local_config.py w/ cons_tok, cons_sec, app_tok, app_sec
+
 # Fixes
 - Automate the scraping of twitter
 

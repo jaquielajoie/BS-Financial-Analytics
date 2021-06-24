@@ -11,7 +11,7 @@ If you would like to help please send me a robust messaging pigeon via [slack | 
 # Components
 - Twitter API consumption
 - Reddit API consumption
-- TradingView API consumption?
+- TradingView API consumption
 - Monetary supply level (API)
 - Inflation rate (API)
 - Tether Trading Volume (on and off BitFinex)
@@ -30,3 +30,6 @@ If you would like to help please send me a robust messaging pigeon via [slack | 
 # Features
 - Trending tweets about USDT/Tether/BTC/Bitcoin
 - Add similar topics from Reddit scrape (praw)
+
+# URGENT
+- I need an Elite Rockstar programmer with Side/Substack experience

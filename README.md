@@ -1,6 +1,7 @@
-# B*ttswap Financial Analytics 😂 C (Lol-LLC)
-this should be a Power BI dashboard
+# Buttswap's Financial Analytics 
 Technical Analysis superhighway 
+Home of the Booty Billy
+The original Uniswap clone
 
 # Components
 - Twitter API consumption

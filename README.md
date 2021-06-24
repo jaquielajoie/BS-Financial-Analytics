@@ -1,5 +1,6 @@
-# Buttswap Financial Analytics
+# B*ttswap "Financial Analytics"
 this should be a Power BI dashboard
+Technical Analysis superhighway 
 
 # Components
 - Twitter API consumption

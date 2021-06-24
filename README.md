@@ -1,7 +1,9 @@
 # Buttswap's Financial Analytics 
-Technical Analysis superhighway 
-Home of the Booty Billy
-The original Uniswap clone
+
+Corporate Awards:  
+- Technical Analysis superhighway  
+- Home of the Booty Billy  
+- The original Uniswap clone  
 
 # Components
 - Twitter API consumption

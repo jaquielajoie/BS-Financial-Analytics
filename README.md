@@ -1,4 +1,4 @@
-# Buttswap's Folk Financial Analytics (mountain XL recipe)
+# BS Folk Financial Analytics (mountain XL recipe)
 
 COMING SOON: http://www.buttswap.finance/
 

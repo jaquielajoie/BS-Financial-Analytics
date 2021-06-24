@@ -1,4 +1,4 @@
-# Buttswap's Financial Analytics 
+# Buttswap's Folkpunk Financial Analytics (country recipe)
 
 COMING SOON: http://www.buttswap.finance/
 

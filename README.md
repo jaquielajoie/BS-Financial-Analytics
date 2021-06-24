@@ -12,8 +12,8 @@ If you would like to help please send me a robust messaging pigeon via [slack | 
 - Twitter API consumption
 - Reddit API consumption
 - TradingView API consumption
-- Tether Trading Volume (on and off BitFinex)
-- BitFinex trading volume
+1. Tether Trading Volume (on and off BitFinex)
+2. BitFinex trading volume
 - SQLite3 DB
 - Flask server
 

@@ -1,4 +1,4 @@
-# B*ttswap Financial Analytics LOLLC CORPORATE INC 
+# B*ttswap Financial Analytics 😂 C (Lol-LLC)
 this should be a Power BI dashboard
 Technical Analysis superhighway 
 

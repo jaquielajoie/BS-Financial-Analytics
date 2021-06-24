@@ -11,11 +11,10 @@ If you would like to help please send me a robust messaging pigeon via [slack | 
 # Components
 - Twitter API consumption
 - Reddit API consumption
+- 
 - TradingView API consumption
 1. Tether Trading Volume (on and off BitFinex)
 2. BitFinex trading volume
-- SQLite3 DB
-- Flask server
 
 # How to run (6-24-21)
 - run <code> python create_db.py </code>

@@ -87,7 +87,7 @@ class TwitterMain():
             #print(trend['name'])
             trend_tweets = []
             trend_tweets.append(trend['name'])
-            tt = tweepy.Cursor(self.api.search, q = trend['name']).items(3)
+            tt = tweepy.Cursor(self.api.search, q = trend['name']).items(5)
 
             for t in tt:
                 trend_tweets.append(self.get_tweet_html(t.id))
@@ -96,6 +96,26 @@ class TwitterMain():
             trend_data.append(tuple(trend_tweets))
 
         self.c.executemany("INSERT INTO trend_data VALUES (?,?,?,?, DATETIME('now'))", trend_data)
+
+        self.conn.commit()
+
+    def get_usdt(self):
+        items = ['USDT', 'Tether']
+        usdt_data = []
+
+        for key in items:
+            #print(trend['name'])
+            usdt_tweets = []
+            usdt_tweets.append(key)
+            tt = tweepy.Cursor(self.api.search, q = key).items(5)
+
+            for t in tt:
+                usdt_tweets.append(self.get_tweet_html(t.id))
+                #print(tweet_html)
+
+            usdt_data.append(tuple(usdt_tweets))
+
+        self.c.executemany("INSERT INTO usdt_data VALUES (?,?,?,?, DATETIME('now'))", usdt_data)
 
         self.conn.commit()
 
@@ -126,13 +146,14 @@ class stats():
         return self.lang, self.top_lang, self.top_tweets
 
 if __name__ == "__main__":
-    num_tweets_to_grab = 10
+    num_tweets_to_grab = 100
     retweet_count = 10000
     try:
         conn = sqlite3.connect(db)
         twit = TwitterMain(num_tweets_to_grab, retweet_count, conn)
         twit.get_streaming_data()
-        twit.get_trends()
+        # twit.get_trends()
+        twit.get_usdt()
 
     except Exception as e:
         print(e.__doc__)

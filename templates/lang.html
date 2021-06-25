@@ -16,7 +16,7 @@
 
         // Create the data table.
         var data = new google.visualization.DataTable();
-                
+
         data.addColumn('string', 'Languages');
         data.addColumn('number', 'Usage');
         data.addColumn({type: 'number', role: 'tooltip'});
@@ -33,14 +33,14 @@
         var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
 
         chart.draw(data, options);
-        
-        
+
+
         // ------------------------------------------------------------------//
         // ------------------------------------------------------------------//
-     
-        
+
+
         var data2 = new google.visualization.DataTable();
-                
+
         data2.addColumn('string', 'Languages');
         data2.addColumn('number', 'Usage');
         data2.addColumn({type: 'number', role: 'annotation'});
@@ -58,16 +58,89 @@
         chart2.draw(data2, options2);
 
         // ------------------------------------------------------------------//
-        // ------------------------------------------------------------------//                
+        // ------------------------------------------------------------------//
       }
     </script>
-{% endblock %}        
-{% block div %}
-<b>Most used languages on Twitter: All Tweets</b>
-    <div id="chart_div"></div>
-    <div id="chart_div2"></div>
 {% endblock %}
 
+{% block tweets %}
+    {% for tweet in tweets %}
+      <div class="window" style="background:white!important">
+        <div class="title-bar">
+          <div class="title-bar-text">#{{loop.index}} Top Tweet (Overall Ranking)</div>
+          <div class="title-bar-controls">
+            <button aria-label="Minimize"></button>
+            <button aria-label="Maximize"></button>
+            <button aria-label="Close"></button>
+          </div>
+        </div>
+        <div align="center">
+            {{ tweet | safe}}
+        </div>
 
+      </div>
+      <br>
+    {% endfor %}
+{% endblock %}
 
+{% block div %}
+<div class="window">
+  <div class="title-bar">
+    <div class="title-bar-text">Most Used Languages ALL Tweets</div>
+    <div class="title-bar-controls">
+      <button aria-label="Minimize"></button>
+      <button aria-label="Maximize"></button>
+      <button aria-label="Close"></button>
+    </div>
+  </div>
+  <code id="chart_div"></code>
+</div>
+<br>
+<div class="window">
+  <div class="title-bar">
+    <div class="title-bar-text">Most Used Languages Top Tweets</div>
+    <div class="title-bar-controls">
+      <button aria-label="Minimize"></button>
+      <button aria-label="Maximize"></button>
+      <button aria-label="Close"></button>
+    </div>
+  </div>
+ <code id="chart_div2"></code>
+</div>
+{% endblock %}
 
+ {% block usdt %}
+  <div class="window">
+    <div class="title-bar">
+      <div class="title-bar-text">BitFinex USDT Volume / BTC Price</div>
+      <div class="title-bar-controls">
+        <button aria-label="Minimize"></button>
+        <button aria-label="Maximize"></button>
+        <button aria-label="Close"></button>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="window">
+    <div class="title-bar">
+      <div class="title-bar-text">USDT Volume / Twitter Activity</div>
+      <div class="title-bar-controls">
+        <button aria-label="Minimize"></button>
+        <button aria-label="Maximize"></button>
+        <button aria-label="Close"></button>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="window">
+    <div class="title-bar">
+      <div class="title-bar-text">BTC Price / USDT Twitter Activity</div>
+      <div class="title-bar-controls">
+        <button aria-label="Minimize"></button>
+        <button aria-label="Maximize"></button>
+        <button aria-label="Close"></button>
+      </div>
+    </div>
+  </div>
+
+ {% endblock %}

@@ -8,6 +8,9 @@ __pycache__/
 
 # Distribution / packaging
 local_config.py
+send_email.py
+*.db
+.gitignore
 .Python
 build/
 develop-eggs/

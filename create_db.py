@@ -9,6 +9,7 @@ try:
     c.execute("drop table trend_data")
     c.execute("drop table twit_data")
     c.execute("drop table lang_data")
+    c.execute("drop table usdt_data")
 except Exception as e:
     print(e)
 
@@ -29,6 +30,13 @@ except Exception as e:
 
 try:
     cmd = "CREATE TABLE lang_data (language TEXT, top_language TEXT, datetime TEXT)"
+    c.execute(cmd)
+except Exception as e:
+    print(e)
+
+
+try:
+    cmd = "CREATE TABLE usdt_data (language TEXT, top_language TEXT, datetime TEXT)"
     c.execute(cmd)
 except Exception as e:
     print(e)

@@ -2,7 +2,7 @@ from flask import Flask, render_template
 import sqlite3
 import ast
 
-db = "../twit_data.db"
+db = "twit_data.db"
 
 app = Flask(__name__)
 
@@ -34,7 +34,7 @@ def get_trends():
 
     c.execute("SELECT * from trend_data ORDER BY datetime DESC LIMIT 10")
     result = c.fetchall()
-    
+
     datetime_trends = result[0]['datetime']
 
     for r in result:
@@ -68,12 +68,20 @@ def main():
     top_language_data = []
 
     lang, top_lang = get_lang()
+    tweets, datetime_toptweets = get_top_tweets()
+
     for l in lang:
         language_data.append([l[0], l[1], l[1]])
 
     for t in top_lang:
         top_language_data.append([t[0], t[1], t[1]])
-    return render_template("lang.html", language_data = language_data, top_language_data = top_language_data)
+
+    return render_template("lang.html", language_data = language_data, top_language_data = top_language_data, tweets = tweets, datetime_toptweets = datetime_toptweets)
+
+@app.route("/about")
+def about():
+    return render_template('about.html')
+
 
 @app.route("/top_tweets")
 def top_tweets():

@@ -110,6 +110,7 @@ class TwitterMain():
             tt = tweepy.Cursor(self.api.search, q = key).items(5)
 
             for t in tt:
+                print(f'get_usdt:t {t}')
                 usdt_tweets.append(self.get_tweet_html(t.id))
                 #print(tweet_html)
 
@@ -151,7 +152,7 @@ if __name__ == "__main__":
     try:
         conn = sqlite3.connect(db)
         twit = TwitterMain(num_tweets_to_grab, retweet_count, conn)
-        twit.get_streaming_data()
+        # twit.get_streaming_data()
         # twit.get_trends()
         twit.get_usdt()
 

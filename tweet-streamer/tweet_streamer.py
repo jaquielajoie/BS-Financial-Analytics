@@ -29,7 +29,7 @@ def stream_tweets(tweet_filepath, search_list):
     stream.filter(track=search_list)
 
 def check_decay(decay):
-    if decay >= 1: # should this be increased over 1??
+    if decay >= 1:
         return 1
     elif decay <= 0:
         return 0
@@ -70,10 +70,13 @@ def spread_search(screen_name, search_term, count, decay):
             decay = check_decay(decay)
 
         count *= decay
-        count = math.ceil(count)
+        count = math.floor(count)
 
-        spread_search(screen_name=tc.screen_name, search_term=search_term, count=count, decay=decay)
-        print(f'spread_search saw: {tc.screen_name} with a decay {decay} and count {count}')
+        if count <= 0:
+            return
+
+        spread_search(screen_name=tc_friend.screen_name, search_term=search_term, count=count, decay=decay)
+        print(f'spread_search saw: {tc_friend.screen_name} with a decay {decay} and count {count}')
 
 class TwitterClient():
 
